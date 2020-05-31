@@ -1,0 +1,30 @@
+// global
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Literata', serif;
+  overflow-x: hidden;
+  font-size: 1.6rem;
+
+  & ::selection {
+    background-color: bg-indigo-700;
+  }
+}
+
+// Tailwind defaults
+.container {
+  @apply mx-auto px-10;
+  position: relative;
+}
