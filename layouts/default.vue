@@ -7,22 +7,22 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import NavBar from '@/components/NavBar.vue';
 import { mapGetters } from 'vuex';
+import NavBar from '@/components/NavBar.vue';
 
 export default Vue.extend({
   components: {
     NavBar,
   },
   computed: {
-    ...mapGetters('layout', ['isPageTransition']),
+    ...mapGetters({ currentTheme: 'layout/currentTheme' }),
   },
-  created() {},
   watch: {
-    $route() {
-      console.log('route changed', this.$route);
+    currentTheme() {
+      (this as any).$colorMode.preference = this.currentTheme;
     },
   },
+  created() {},
 });
 </script>
 

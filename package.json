@@ -10,24 +10,31 @@
     "generate": "nuxt-ts generate",
     "start": "nuxt-ts start",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "deploy": "npm run generate && firebase deploy --only hosting"
+    "build:deploy": "npm run generate && firebase deploy --only hosting",
+    "deploy": "firebase deploy --only hosting",
+    "login": "firebase login"
   },
   "dependencies": {
-    "nuxt": "^2.12.2",
-    "@nuxt/typescript-runtime": "^0.4.5"
+    "@nuxt/typescript-runtime": "^0.4.5",
+    "mapbox-gl": "^1.10.1",
+    "nuxt": "^2.12.2"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.5",
+    "@nuxtjs/color-mode": "^1.0.0",
     "@nuxtjs/eslint-config-typescript": "^1.0.2",
     "@nuxtjs/eslint-module": "^1.1.0",
     "@nuxtjs/tailwindcss": "^1.4.0",
+    "@types/mapbox-gl": "^1.10.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-nuxt": ">=0.5.2",
     "eslint-plugin-prettier": "^3.1.3",
+    "firebase-tools": "^8.4.1",
     "node-sass": "^4.13.1",
     "prettier": "^2.0.4",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "tailwindcss-dark-mode": "^1.1.4"
   }
 }

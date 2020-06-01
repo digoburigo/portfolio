@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>contact page {{ msg }}</p>
+    <button>Language</button>
   </div>
 </template>
 
@@ -8,13 +8,9 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-  transition: 'slide-fade',
-  data() {
-    return {
-      msg: 123,
-    };
-  },
+  name: 'LanguageButton'
 });
 </script>
 
 <style scoped></style>
+

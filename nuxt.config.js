@@ -7,7 +7,10 @@ export default {
     title: 'RB',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1, minimum-scale=1',
+      },
       {
         hid: 'description',
         name: 'description',
@@ -20,6 +23,10 @@ export default {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Literata&display=swap',
       },
+      {
+        rel: 'stylesheet',
+        href: 'https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css',
+      },
     ],
   },
   /*
@@ -29,9 +36,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [
-    '~/assets/main.scss'
-  ],
+  css: ['~/assets/main.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -43,6 +48,7 @@ export default {
     '@nuxt/typescript-build',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
   ],
   /*
    ** Nuxt.js modules
@@ -56,5 +62,8 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {},
+  },
+  purgeCSS: {
+    whitelist: ['dark-mode'],
   },
 };

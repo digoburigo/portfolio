@@ -1,8 +1,12 @@
 <template>
   <div>
     <nav class="nav container flex items-center">
-      <p>Rodrigo</p>
+      <p>Rodrigo Búrigo</p>
       <span class="flex-grow"></span>
+      <div>
+        <LanguageButton />
+        <ThemeButton />
+      </div>
       <div class="hidden sm:block">
         <NuxtLink to="/" class="mr-10">Home</NuxtLink>
         <NuxtLink to="/works" class="mr-10">Works</NuxtLink>
@@ -21,8 +25,15 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import ThemeButton from '@/components/LanguageButton.vue';
+import LanguageButton from '@/components/ThemeButton.vue';
 
-export default Vue.extend({});
+export default Vue.extend({
+  components: {
+    LanguageButton,
+    ThemeButton,
+  },
+});
 </script>
 
 <style scoped>
