@@ -8,16 +8,16 @@
         <ThemeButton />
       </div>
       <div class="hidden sm:block">
-        <NuxtLink to="/" class="mr-10">Home</NuxtLink>
-        <NuxtLink to="/works" class="mr-10">Works</NuxtLink>
-        <NuxtLink to="/contact">Contact</NuxtLink>
+        <NuxtLink :to="localePath('/')" class="mr-10">Home</NuxtLink>
+        <NuxtLink :to="localePath('/works')" class="mr-10">Works</NuxtLink>
+        <NuxtLink :to="localePath('/contact')">Contact</NuxtLink>
       </div>
       <div
         class="block sm:hidden fixed right-0 bottom-0 w-screen h-24 z-10 bg-gray-600 text-gray-100 flex items-center justify-around"
       >
-        <NuxtLink to="/">Home</NuxtLink>
-        <NuxtLink to="/works">Works</NuxtLink>
-        <NuxtLink to="/contact">Contact</NuxtLink>
+        <NuxtLink :to="localePath('/')">Home</NuxtLink>
+        <NuxtLink :to="localePath('/works')">Works</NuxtLink>
+        <NuxtLink :to="localePath('/contact')">Contact</NuxtLink>
       </div>
     </nav>
   </div>

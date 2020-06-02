@@ -2,7 +2,6 @@
   <div class="container h-full">
     <Hero />
     <Map />
-    {{ currentTheme }}
   </div>
 </template>
 

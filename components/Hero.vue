@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="text-5xl text-blue-500 dark:text-blue-300">
-      A Web gera conexões.
+      {{ $t('title') }}
     </h1>
     <h2 class="text-3xl text-blue-800 dark:text-blue-500">
       Eu quero ajudar a sua (idéia) a se conectar.
