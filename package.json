@@ -17,7 +17,7 @@
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.4.5",
     "mapbox-gl": "^1.10.1",
-    "nuxt": "^2.12.2",
+    "nuxt": "^3.4.3",
     "nuxt-i18n": "^6.12.1"
   },
   "devDependencies": {
